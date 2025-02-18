@@ -51,18 +51,20 @@ public class RestaurantOrder {
  
         // TODO: Display total cost
         System.out.println("Final total: $" + calculateTotal(totalCost));
+        double discount = 0.10;
+        System.out.println("Final total with discount: $" + calculateTotal(totalCost, discount));
         scanner.close();
     }
  
     // Overloaded method to apply a discount
     public static double calculateTotal(double totalCost) {
         // TODO: Implement method to return total cost
-        return totalCost;
+        return totalCost; //No discount
     }
  
     public static double calculateTotal(double totalCost, double discount) {
         // TODO: Implement method to return total cost after discount
-        return totalCost;
+        return totalCost * (1 - discount); // With discount
     }
  
     // Main method to run the program
